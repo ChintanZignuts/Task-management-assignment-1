@@ -23,9 +23,7 @@ class TaskFactory extends Factory
             'title'=>$this->faker->sentence,
             'description'=>$this->faker->paragraph,
             'due_date'=>$this->faker->dateTimeBetween('now','+30 day')->format('Y-m-d'),
-            'user_id'=>function(){
-                return User::factory()->create()->id;
-            }
+            'user_id'=>1
         ];
     }
 }
