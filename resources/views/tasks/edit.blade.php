@@ -1,5 +1,3 @@
-<!-- resources/views/tasks/edit.blade.php -->
-
 @extends('layouts.app')
 
 @section('slot')
@@ -24,7 +22,6 @@
                     <input type="date" name="due_date" id="due_date" required style="border-radius: 10px "
                         value="{{ $task->due_date }}">
                 </div>
-                <!-- Add other fields as needed -->
 
                 <input type="submit" class="btn btn-primary" value="Edit Task" style="background: green;">
             </form>
