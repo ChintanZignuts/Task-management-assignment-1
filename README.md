@@ -51,6 +51,10 @@ Run the database seeder and you're done
 
     php artisan db:seed
 
+
+After seeding the database on login page enter this credentials
+
+
 email:-
 
     test@example.com
