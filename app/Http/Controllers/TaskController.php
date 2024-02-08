@@ -12,7 +12,7 @@ class TaskController extends Controller
         $tasks=Task::where('user_id', Auth::id())->get();
         return view('tasks.index',compact('tasks'));
     }
-    public function show($id){#
+    public function show($id){
         $task=Task::findOrFail($id);
         return view('tasks.show',compact('task'));
 
@@ -25,9 +25,10 @@ class TaskController extends Controller
             'title'=>'required|max:255',
             'description'=>'required',
             'due_date'=>'required|date',
-            'user_id'=>'required|exists:users,id'
+            // 'user_id'=>'required|exists:users,id'
         ]);
-        Task::create($request->all());
+        $user = Auth::user();
+        Task::create($request->only(['title', 'description', 'due_date'])+ ['user_id' => $user->id]);
         return redirect()->route('tasks.index')->with('success','Task created successfully');
 
     }
