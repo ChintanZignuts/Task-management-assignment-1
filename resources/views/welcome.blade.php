@@ -107,7 +107,6 @@
             border-collapse: collapse
         }
 
-        button,
         input,
         optgroup,
         select,
@@ -126,15 +125,6 @@
             text-transform: none
         }
 
-        [type=button],
-        [type=reset],
-        [type=submit],
-        button {
-            -webkit-appearance: button;
-            background-color: transparent;
-            background-image: none
-        }
-
         :-moz-focusring {
             outline: auto
         }
@@ -147,10 +137,7 @@
             vertical-align: baseline
         }
 
-        ::-webkit-inner-spin-button,
-        ::-webkit-outer-spin-button {
-            height: auto
-        }
+
 
         [type=search] {
             -webkit-appearance: textfield;
@@ -159,11 +146,6 @@
 
         ::-webkit-search-decoration {
             -webkit-appearance: none
-        }
-
-        ::-webkit-file-upload-button {
-            -webkit-appearance: button;
-            font: inherit
         }
 
         summary {

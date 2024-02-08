@@ -17,7 +17,7 @@
                        class="text-black hover:text-white  bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 rounded-lg text-base font-bold px-5 py-2.5 text-center me-2 mb-2">Create
                        New Task</a>
                </div>
-               <div class="flex bg-slate-500 justify-center items-center m-5">
+               <div class="flex flex-col justify-center items-center m-5">
                    <table class="table-auto w-full bg-white border border-gray-300 rounded">
                        <thead class="rounded">
                            <tr class="bg-gray-200">
@@ -67,7 +67,9 @@
                            @endforelse
                        </tbody>
                    </table>
-
+                   <div class="mt-4 flex flex-col items-center justify-center">
+                       {{ $tasks->links() }}
+                   </div>
                </div>
 
            </div>
