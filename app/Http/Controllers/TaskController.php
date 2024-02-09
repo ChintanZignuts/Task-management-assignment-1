@@ -9,14 +9,14 @@ class TaskController extends Controller
 {
     //
     public function index(){
-        $tasks=Task::where('user_id', Auth::id())->paginate(6);
+        $tasks=Task::where('user_id', auth()->user()->id)->paginate(9);
         return view('tasks.index',compact('tasks'));
     }
     public function show($id){
         $task=Task::findOrFail($id);
         return view('tasks.show',compact('task'));
 
-    }
+    }   
     public function create(){
         return view('tasks.create');
     }

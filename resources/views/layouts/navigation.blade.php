@@ -11,11 +11,11 @@
                 </div>
 
                 <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex text-lg">
+                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" class="text-xl">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('tasks.index')" :active="request()->routeIs('tasks.index')">
+                    <x-nav-link :href="route('tasks.index')" :active="request()->routeIs('tasks.index')" class="text-xl">
                         {{ __('Task') }}
                     </x-nav-link>
                 </div>
