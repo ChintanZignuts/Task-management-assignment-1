@@ -29,7 +29,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::prefix('/tasks')->group(function(){
+Route::prefix('/tasks')->middleware('auth')->group(function(){
     Route::get('/',[TaskController::class,'index'])->name('tasks.index');
     Route::get('/create',[TaskController::class,'create'])->name('tasks.create');
     Route::post('/',[TaskController::class,'store'])->name('tasks.store');
