@@ -11,19 +11,28 @@
                     @csrf
                     <div class="mb-4 flex flex-col">
                         <label for="title" class="text-gray-700">Task Title:</label>
-                        <input type="text" name="title" id="title" required
+                        <input type="text" name="title" id="title" value="{{ old('title') }}"
                             class="border rounded-md p-2 focus:outline-none focus:border-green-500"
                             placeholder="Add Task Title">
+                        @error('title')
+                            <div class="error text-red-500">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="mb-4 flex flex-col">
                         <label for="description" class="text-gray-700">Description:</label>
-                        <textarea name="description" id="description" required
+                        <textarea name="description" id="description" value="{{ old('description') }}"
                             class="border rounded-md p-2 focus:outline-none focus:border-green-500 h-40" placeholder="Add Task Description"></textarea>
+                        @error('description')
+                            <div class="error text-red-500">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="mb-4 flex flex-col">
                         <label for="due_date" class="text-gray-700">Due Date:</label>
-                        <input type="date" name="due_date" id="due_date" required
+                        <input type="date" name="due_date" id="due_date" value="{{ old('due_date') }}"
                             class="border rounded-md p-2 focus:outline-none focus:border-green-500">
+                        @error('due_date')
+                            <div class="error text-red-500">{{ $message }}</div>
+                        @enderror
                     </div>
 
                     <input type="submit"

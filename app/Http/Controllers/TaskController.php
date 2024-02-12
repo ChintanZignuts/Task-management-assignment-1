@@ -26,7 +26,7 @@ class TaskController extends Controller
             'description'=>'required',
             'due_date'=>'required|date',
             // 'user_id'=>'required|exists:users,id'
-        ]);
+        ]);                                                                                                                                                   
         $user = Auth::user();
         Task::create($request->only(['title', 'description', 'due_date'])+ ['user_id' => $user->id]);
         return redirect()->route('tasks.index')->with('success','Task created successfully');
